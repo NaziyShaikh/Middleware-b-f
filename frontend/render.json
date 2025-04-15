@@ -4,8 +4,9 @@
       "type": "static",
       "name": "middlewares-frontend",
       "env": "static",
-      "buildCommand": "npm run build",
+      "buildCommand": "npm install && npm run build",
       "startCommand": "serve -s build",
+      "publishDirectory": "build",
       "envVars": {
         "PORT": "80"
       }
