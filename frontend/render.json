@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+      "type": "static",
+      "name": "middlewares-frontend",
+      "env": "static",
+      "buildCommand": "npm run build",
+      "startCommand": "serve -s build",
+      "envVars": {
+        "PORT": "80"
+      }
+    }
+  ]
+}

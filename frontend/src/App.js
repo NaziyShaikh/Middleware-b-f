@@ -9,20 +9,18 @@ function App() {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const response = await fetch('https://middleware-b.onrender.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
-        const data = await response.json();
-        setResponseData(data);
-    };
-
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/submit`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    });
+    const data = await response.json();
+    setResponseData(data);
+};
    return (
        <div className="contact-form">
            <h1>Contact Form</h1>
