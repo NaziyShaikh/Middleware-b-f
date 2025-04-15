@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+      "type": "web",
+      "name": "middlewares-backend",
+      "env": "node",
+      "buildCommand": "npm install",
+      "startCommand": "node server.js",
+      "envVars": {
+        "PORT": "5000"
+      }
+    }
+  ]
+}
