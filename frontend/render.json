@@ -9,7 +9,8 @@
       "publishDirectory": "build",
       "envVars": {
         "PORT": "80"
-      }
+      },
+      "rootDirectory": "./"
     }
   ]
 }
